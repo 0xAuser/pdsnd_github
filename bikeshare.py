@@ -143,7 +143,7 @@ def user_stats(df):
     print("\n")
 
 
-   # TO DO: Display earliest, most recent, and most common year of birth
+   # TO DO: Display earliest, most recent, and most common year of birth with KeyError as exception
     try:
         print("earliest birth:", df["Birth Year"].min())
         print("most recent year birth:", df["Birth Year"].max())
