@@ -335,7 +335,7 @@ def user_stats(df):
     print("\n")
 
 
-   # TO DO: Display earliest, most recent, and most common year of birth
+   # TO DO: Display earliest, most recent, and most common year of birth with KeyError as exception
     try:
         print("earliest birth:", df["Birth Year"].min())
         print("most recent year birth:", df["Birth Year"].max())
@@ -351,19 +351,13 @@ def user_stats(df):
 #Display raw data of first 5 rows of data frame for each action until five times
 
 def raw_data(df):
-
-    print(df.head())
     x = 0
-
-    while True:
+    while (x <= 25):
         view_raw_data = input('\n Type yes or no to check 5 rows of raw data.\n')
-        if view_raw_data.lower() != 'yes':
+        if view_raw_data != 'yes':
             return
-        x = x + 5
         print(df.iloc[x:x+5])
-
-
-
+        x += 5
 
 
 def main():
